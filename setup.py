@@ -1,8 +1,4 @@
-from pathlib import Path
-
 from setuptools import setup
 
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
-
-setup(long_description=long_description, long_description_content_type="text/markdown")
+# Metadata goes in setup.cfg. These are here for GitHub's dependency graph.
+setup(install_requires=["markdown2==2.4.3", "beautifulsoup4==4.11.1", "typer==0.4.1", "pyppeteer==1.0.2"])
