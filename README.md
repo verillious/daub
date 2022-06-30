@@ -1,4 +1,4 @@
-blat
+daub
 ======
 
 opinionated pdf renderer
@@ -8,14 +8,14 @@ install
 
 
 ```console
-pip install --user blat
+pip install --user daub
 ```
 
 Or, to install from source:
 
 ```console
-git clone git@github.com:verillious/blat.git
-pip install --user -e blat/
+git clone git@github.com:verillious/daub.git
+pip install --user -e daub/
 ```
 
 usage
@@ -23,7 +23,7 @@ usage
 from the command line:
 
 ```console
-blat [OPTIONS] MARKDOWN_FILE [OUTPUT_FILE]
+daub [OPTIONS] MARKDOWN_FILE [OUTPUT_FILE]
 
   Opinionated pdf renderer
 

@@ -1,8 +1,8 @@
-"""Console script for blat."""
+"""Console script for daub."""
 
 import typer
 
-from blat import md2pdf
+from daub import md2pdf
 
 app = typer.Typer()
 

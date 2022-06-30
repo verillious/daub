@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Tests for `blat` package."""
+"""Tests for `daub` package."""
 
 from os import stat
 from pathlib import Path
@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 from typer.testing import CliRunner
 
-from blat.cli import app
+from daub.cli import app
 
 
 @pytest.fixture(autouse=True)

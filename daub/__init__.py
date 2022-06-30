@@ -1,4 +1,4 @@
-"""blat, opinionated pdf rendering"""
+"""daub, opinionated pdf rendering"""
 
 from .core import md2pdf  # noqa: F401
 

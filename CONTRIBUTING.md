@@ -1,17 +1,17 @@
-Contributing to blat
+Contributing to daub
 ======================
 
 ## Setup for local development
 
-1. Fork the `blat` repo on GitHub.
+1. Fork the `daub` repo on GitHub.
 2. Clone your fork locally:
 
    ```bash
-   git clone git@github.com:your_username_here/blat.git
+   git clone git@github.com:your_username_here/daub.git
    ```
 3. Install your local copy into a virtualenv.
    ```bash
-   cd blat/
+   cd daub/
    virtualenv venv
    ./venv/Scripts/activate
    pip install -e .

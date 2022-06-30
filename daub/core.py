@@ -1,4 +1,4 @@
-"""Top-level package for blat"""
+"""Top-level package for daub"""
 
 import asyncio
 import base64
