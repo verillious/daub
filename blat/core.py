@@ -69,7 +69,7 @@ def _guess_chrome_path() -> str:  # pragma: no cover
     for guess in guesses:
         if os.path.exists(guess):
             return guess
-    return None
+    return ""
 
 
 def md2pdf(md_file_path: str, pdf_file_path: str = None, css_file_path: str = None):

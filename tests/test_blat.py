@@ -44,7 +44,7 @@ def test_generate_pdf():
     assert pdf_result.st_nlink == 1
     assert pdf_result.st_uid == 0
     assert pdf_result.st_gid == 0
-    assert pdf_result.st_size == 63107
+    assert pdf_result.st_size == 63095
 
 
 def test_generate_pdf_with_css():
