@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 body {
-  background-color: #fff;
-  font: 14px/1.5 'Noto Sans', Helvetica, Arial, sans-serif;
-  color:#727272;
+  background-color: #069;
+  font: 30px sans-serif;
+  color:#aa619a;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#0011ff;
   margin:0 0 20px;
 }
 
@@ -56,7 +56,6 @@ code, pre {
 }
 
 pre {
-  /* padding:8px 15px; */
   background: #f8f8f8;
   border-radius:5px;
   border:1px solid #e5e5e5;
@@ -70,7 +69,6 @@ table {
 
 th, td {
   text-align:left;
-  /* padding:5px 10px; */
   border-bottom:1px solid #e5e5e5;
 }
 

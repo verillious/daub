@@ -8,14 +8,14 @@ install
 
 
 ```console
-$ pip install --user blat
+pip install --user blat
 ```
 
 Or, to install from source:
 
 ```console
-$ git clone git@github.com:verillious/blat.git
-$ pip install --user -e blat/
+git clone git@github.com:verillious/blat.git
+pip install --user -e blat/
 ```
 
 usage
