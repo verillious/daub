@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """Tests for `daub` package."""
 
-from os import stat
 from pathlib import Path
 
 import pytest
