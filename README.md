@@ -6,7 +6,6 @@ opinionated pdf renderer
 install
 -------
 
-
 ```console
 pip install --user daub
 ```

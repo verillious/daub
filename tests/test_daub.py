@@ -39,11 +39,6 @@ def test_generate_pdf():
     assert pdf.exists()
     pdf_result = stat(str(pdf.resolve()))
 
-    assert pdf_result.st_mode == 33206
-    assert pdf_result.st_dev == 1723108590
-    assert pdf_result.st_nlink == 1
-    assert pdf_result.st_uid == 0
-    assert pdf_result.st_gid == 0
     assert pdf_result.st_size == 63095
 
 
@@ -56,9 +51,4 @@ def test_generate_pdf_with_css():
     assert pdf.exists()
     pdf_result = stat(str(pdf.resolve()))
 
-    assert pdf_result.st_mode == 33206
-    assert pdf_result.st_dev == 1723108590
-    assert pdf_result.st_nlink == 1
-    assert pdf_result.st_uid == 0
-    assert pdf_result.st_gid == 0
     assert pdf_result.st_size == 71114
