@@ -37,9 +37,6 @@ def test_generate_pdf():
     assert help_result.exit_code == 0
     pdf = Path("tests/test.pdf")
     assert pdf.exists()
-    pdf_result = stat(str(pdf.resolve()))
-
-    assert pdf_result.st_size == 63095
 
 
 def test_generate_pdf_with_css():
@@ -49,6 +46,3 @@ def test_generate_pdf_with_css():
     assert help_result.exit_code == 0
     pdf = Path("tests/test.pdf")
     assert pdf.exists()
-    pdf_result = stat(str(pdf.resolve()))
-
-    assert pdf_result.st_size == 71114
