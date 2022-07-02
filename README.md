@@ -1,5 +1,10 @@
 daub
 ======
+![Black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Pulse](https://img.shields.io/github/commit-activity/m/verillious/daub)
+![Checks](https://github.com/verillious/daub/actions/workflows/check.yml/badge.svg)
+![Publish](https://github.com/verillious/daub/actions/workflows/publish.yml/badge.svg)
+
 
 opinionated pdf renderer
 
