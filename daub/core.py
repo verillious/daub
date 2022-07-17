@@ -52,7 +52,7 @@ HTML_TEMPLATE = Path(__file__).parent / "html" / "template.html"
 BASE_CSS = Path(__file__).parent / "css" / "base.css"
 
 
-def _guess_chrome_path() -> str:    # pragma: no cover
+def _guess_chrome_path() -> str:  # pragma: no cover
     """
     try to locate a chrome executable
 
