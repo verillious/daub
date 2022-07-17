@@ -1,19 +1,30 @@
 """Console script for daub."""
 
-import typer
+import click
 
 from daub import md2pdf
 
-app = typer.Typer()
 
-
-@app.command()
+@click.command()
+@click.argument("markdown_file", type=click.Path(exists=True))
+@click.option(
+    "-o",
+    "--output",
+    type=click.Path(),
+    default=None,
+    help="Override the output pdf file path.",
+)
+@click.option(
+    "--css",
+    type=click.Path(exists=True),
+    default=None,
+    help="Override the default stylesheet.",
+)
+@click.version_option()
 def main(
     markdown_file: str,
-    output_file: str = typer.Argument(None),
-    css: str = typer.Option(
-        None, "--css", "-c", help="Path to a css file to use for styling."
-    ),
+    output: str = None,
+    css: str = None,
 ):
     """Opinionated pdf renderer"""
-    md2pdf(markdown_file, output_file, css)
+    md2pdf(markdown_file, output, css)

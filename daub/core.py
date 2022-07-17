@@ -52,7 +52,7 @@ HTML_TEMPLATE = Path(__file__).parent / "html" / "template.html"
 BASE_CSS = Path(__file__).parent / "css" / "base.css"
 
 
-def _guess_chrome_path() -> str:  # pragma: no cover
+def _guess_chrome_path() -> str:    # pragma: no cover
     """
     try to locate a chrome executable
 
@@ -66,10 +66,7 @@ def _guess_chrome_path() -> str:  # pragma: no cover
         guesses = CHROME_GUESSES_WINDOWS
     else:
         guesses = CHROME_GUESSES_LINUX
-    for guess in guesses:
-        if os.path.exists(guess):
-            return guess
-    return ""
+    return next((guess for guess in guesses if os.path.exists(guess)), "")
 
 
 def md2pdf(md_file_path: str, pdf_file_path: str = None, css_file_path: str = None):
