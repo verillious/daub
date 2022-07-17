@@ -4,9 +4,9 @@
 from pathlib import Path
 
 import pytest
-from typer.testing import CliRunner
+from click.testing import CliRunner
 
-from daub.cli import app
+from daub.cli import main
 
 
 @pytest.fixture(autouse=True)
@@ -24,7 +24,7 @@ def run_around_tests():
 def test_command_line_interface():
     """test the CLI launches"""
     runner = CliRunner()
-    help_result = runner.invoke(app, ["--help"])
+    help_result = runner.invoke(main, ["--help"])
     assert help_result.exit_code == 0
     assert "Show this message and exit." in help_result.output
 
@@ -32,7 +32,7 @@ def test_command_line_interface():
 def test_generate_pdf():
     """test rendering a markdown document to a pdf file"""
     runner = CliRunner()
-    help_result = runner.invoke(app, ["tests/test.md"])
+    help_result = runner.invoke(main, ["tests/test.md"])
     assert help_result.exit_code == 0
     pdf = Path("tests/test.pdf")
     assert pdf.exists()
@@ -41,7 +41,7 @@ def test_generate_pdf():
 def test_generate_pdf_with_css():
     """test rendering a markdown document to a pdf file using a custom css file"""
     runner = CliRunner()
-    help_result = runner.invoke(app, ["tests/test.md", "--css", "tests/test.css"])
+    help_result = runner.invoke(main, ["tests/test.md", "--css", "tests/test.css"])
     assert help_result.exit_code == 0
     pdf = Path("tests/test.pdf")
     assert pdf.exists()
