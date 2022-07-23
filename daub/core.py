@@ -1,4 +1,4 @@
-"""Top-level package for daub"""
+"""Top-level package for daub."""
 
 import asyncio
 import base64
@@ -54,12 +54,11 @@ BASE_CSS = Path(__file__).parent / "css" / "base.css"
 
 def _guess_chrome_path() -> str:  # pragma: no cover
     """
-    try to locate a chrome executable
+    Try to locate a chrome executable.
 
     Returns:
         str: the path to the chrome executable, or None if nothing is found.
     """
-
     if sys.platform == "darwin":
         guesses = CHROME_GUESSES_MACOS
     elif sys.platform == "win32":
@@ -71,14 +70,13 @@ def _guess_chrome_path() -> str:  # pragma: no cover
 
 def md2pdf(md_file_path: str, pdf_file_path: str = None, css_file_path: str = None):
     """
-    converts a markdown file to a pdf file
+    Convert a markdown file to a pdf file.
 
     Args:
         md_file_path (str): the markdown file to convert
         pdf_file_path (str, optional): the output pdf file. Defaults to None.
         css_file_path (str, optional): a css file to use for styling. Defaults to None.
     """
-
     pdf_file_path = (
         str(Path(pdf_file_path).resolve())
         if pdf_file_path
@@ -112,14 +110,13 @@ def md2pdf(md_file_path: str, pdf_file_path: str = None, css_file_path: str = No
 
 async def write_pdf(html: str, output_file: str, chrome: str = "") -> None:
     """
-    render an html file to pdf using chrome or chromium
+    Render an html file to pdf using chrome or chromium.
 
     Args:
         html (str): the html string
         output_file (str): the output pdf file
         chrome (str, optional): absolute path to a chrome executable. Defaults to "".
     """
-
     html64 = base64.b64encode(html.encode("utf-8"))
     browser = await launch(executablePath=chrome or _guess_chrome_path())
     page = await browser.newPage()

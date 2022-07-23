@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Tests for `daub` package."""
 
 from pathlib import Path
@@ -11,7 +12,7 @@ from daub.cli import main
 
 @pytest.fixture(autouse=True)
 def run_around_tests():
-    """Make sure we get rid of generated files"""
+    """Make sure we get rid of generated files."""
     file = Path("tests/test.pdf")
     if file.exists():
         file.unlink()
@@ -22,7 +23,7 @@ def run_around_tests():
 
 
 def test_command_line_interface():
-    """test the CLI launches"""
+    """Test the CLI launches."""
     runner = CliRunner()
     help_result = runner.invoke(main, ["--help"])
     assert help_result.exit_code == 0
@@ -30,7 +31,7 @@ def test_command_line_interface():
 
 
 def test_generate_pdf():
-    """test rendering a markdown document to a pdf file"""
+    """Test rendering a markdown document to a pdf file."""
     runner = CliRunner()
     help_result = runner.invoke(main, ["tests/test.md"])
     assert help_result.exit_code == 0
@@ -39,7 +40,7 @@ def test_generate_pdf():
 
 
 def test_generate_pdf_with_css():
-    """test rendering a markdown document to a pdf file using a custom css file"""
+    """Test rendering a markdown document to a pdf file using a custom css file."""
     runner = CliRunner()
     help_result = runner.invoke(main, ["tests/test.md", "--css", "tests/test.css"])
     assert help_result.exit_code == 0

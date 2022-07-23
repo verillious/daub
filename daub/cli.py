@@ -26,5 +26,5 @@ def main(
     output: str = None,
     css: str = None,
 ):
-    """Opinionated pdf renderer"""
+    """Opinionated pdf renderer."""
     md2pdf(markdown_file, output, css)
